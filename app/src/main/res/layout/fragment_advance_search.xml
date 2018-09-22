@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AdvanceSearchFragment"  >
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <Button
+        android:id="@+id/btn_currentlocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/current_location"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:background="@drawable/rounded_orange"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_currentlocation"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:text="OR"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_drawable"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/txt_or"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/autocompletetextview_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_or"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_transparent"
+
+        >
+    <TextView
+        android:id="@+id/location_autocompletetextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Town or postcode"
+        android:drawableLeft="@drawable/location"
+        android:drawablePadding="10dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:layout_below="@id/txt_or"
+
+        android:background="@color/colorWhite"
+
+        />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/autocompletetextview_cardview"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="AND"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_drawable"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/txt_and"
+        />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/filter_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_and"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="16dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/rounded_transparent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:divider="@android:drawable/divider_horizontal_textfield"
+            android:dividerPadding="2dp"
+            android:showDividers="middle"
+            >
+
+
+
+            <TextView
+                android:id="@+id/txt_beer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/ic_pintbeer"
+                android:drawablePadding="5dp"
+                android:text="@string/specific_beer"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                />
+
+            <TextView
+                android:id="@+id/txt_features"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/ic_features"
+                android:drawablePadding="5dp"
+                android:text="Select features from pub"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:drawableRight="@android:drawable/arrow_down_float"
+                />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/search"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        android:layout_below="@id/filter_cardview"
+        android:background="@drawable/rounded_primary"/>
+
+
+
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">gotomypub</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Rohit Dhawade</string>
+    <string name="nav_header_subtitle">rohit.dhawde@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+
+    <string name="msg_permission_call">To call from app please enable call permission from setting</string>
+    <string name="title_permission">Allow Permission</string>
+    <string name="msg_permission_location">To provide restaurant  near to you,Please enable location permission from setting</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--<string name="browserkey">AIzaSyCI4mjG97mNamVl3aKN1zXwZCfPHEr3joc</string>-->
+    <string name="browserkey">AIzaSyDsHkRWwFAYyASW9LfvnwImLp003IK8Cw0</string>
+    <string name="drag_melbourne">melbourne</string>
+    <string name="flat">flat</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="specific_beer">Specific beer</string>
+
+    <string name="current_location">Current Location</string>
+    <string name="err_msg_no_data_location">There is no data available for selected location,Please select another location</string>
+    <string name="err_msg_no_data_pub">There is no data available for selected pub</string>
+
+    <string name="map">Map</string>
+    <string name="simple_search">Simple Search</string>
+    <string name="advanced_search">Advanced Search</string>
+
+    <string name="ic_child">&amp;#xf1ae;</string>
+    <string name="ic_skysport">&amp;#xf26c;</string>
+    <string name="ic_garden">&amp;#xf4d8;</string>
+    <string name="ic_fireplace">&amp;#xf024;</string>
+    <string name="ic_livemusic">&amp;#xf001;</string>
+    <string name="ic_fruitmachine">&amp;#xf12e;</string>
+    <string name="ic_food">&amp;#xf2e7;</string>
+
+    <string name="ic_dog">&amp;#xf38e;</string>
+    <string name="ic_wifi">&amp;#xf1eb;</string>
+    <string name="ic_quiet">&amp;#xf410;</string>
+    <string name="ic_dart">&amp;#xf2dc;</string>
+    <string name="ic_accomodation">&amp;#xf594;</string>
+    <string name="ic_parking">&amp;#xf540;</string>
+    <string name="ic_party">&amp;#xf2ce;</string>
+    <string name="ic_quiz">&amp;#xf530;</string>
+    <string name="ic_btsport">&amp;#xf433;</string>
+    <string name="ic_sport">&amp;#xf44e;</string>
+    <string name="ic_dj">&amp;#xf29e;</string>
+    <string name="ic_function">&amp;#xf030;</string>
+
+
+    <string name="sky_sport">Sky Sport</string>
+
+</resources>
