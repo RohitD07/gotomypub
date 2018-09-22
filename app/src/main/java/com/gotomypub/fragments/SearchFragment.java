@@ -10,13 +10,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.crystal.crystalrangeseekbar.interfaces.OnSeekbarChangeListener;
+import com.crystal.crystalrangeseekbar.interfaces.OnSeekbarFinalValueListener;
+import com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar;
 import com.gotomypub.MyPubApplication;
 import com.gotomypub.R;
 import com.gotomypub.networkutilities.BeerItem;
@@ -30,7 +35,6 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class SearchFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -45,6 +49,8 @@ public class SearchFragment extends Fragment {
     RadioButton normalRadioButton;
     RadioButton  advanceRadioButton;
     AdvanceSearchFragment advanceSearchFragment;
+    CrystalSeekbar distanceSeekBar;
+    TextView txtDistance;
 
 
     public SearchFragment() {
@@ -93,6 +99,8 @@ public class SearchFragment extends Fragment {
         radioGroup=view.findViewById(R.id.search_radiogroup);
         normalRadioButton=view.findViewById(R.id.radio_normal);
         advanceRadioButton=view.findViewById(R.id.radio_advance);
+        distanceSeekBar=view.findViewById(R.id.seekBar);
+        txtDistance=view.findViewById(R.id.txt_distance);
         viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(new SearchFragmentPagerAdapter(getChildFragmentManager()) );
        // tabLayout.setupWithViewPager(viewPager);
@@ -164,13 +172,53 @@ public class SearchFragment extends Fragment {
        });
 
 
+      // distanceSeekBar.incrementProgressBy(5);
+      /* distanceSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+           @Override
+           public void onProgressChanged(SeekBar seekBar, int val, boolean b) {
+               Log.d("progress",val+"");
+               txtDistance.setText(getString(R.string.distance_label)+val);
+           }
+
+           @Override
+           public void onStartTrackingTouch(SeekBar seekBar) {
+
+           }
+
+           @Override
+           public void onStopTrackingTouch(SeekBar seekBar) {
+
+           }
+       });
+
+  distanceSeekBar.setProgress(5);
 
 
+*/
 
+        distanceSeekBar.setOnSeekbarChangeListener(new OnSeekbarChangeListener() {
+            @Override
+            public void valueChanged(Number minValue) {
+                txtDistance.setText(getString(R.string.distance_label)+minValue+ " km");
+            }
+        });
+
+// set final value listener
+        distanceSeekBar.setOnSeekbarFinalValueListener(new OnSeekbarFinalValueListener() {
+            @Override
+            public void finalValue(Number value) {
+                Log.d("CRS=>", String.valueOf(value));
+            }
+        });
 
         //tabLayout.getChildAt(0).setBackground(ContextCompat.getDrawable(getContext(),R.drawable.tab_lef_background));
         //tabLayout.getChildAt(1).setBackground(ContextCompat.getDrawable(getContext(),R.drawable.tab_right_bg));
 
+    }
+
+    public String getDistance(){
+
+        return String.valueOf(distanceSeekBar.getSelectedMinValue());
     }
 
     public class SearchFragmentPagerAdapter extends FragmentPagerAdapter {

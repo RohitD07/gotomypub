@@ -198,6 +198,8 @@ public class AdvanceSearchFragment extends Fragment implements View.OnClickListe
                 Toast.makeText(getActivity(),"Please select location to search nearby pubs",Toast.LENGTH_LONG).show();
                 return;
             }
+            String distance=((SearchFragment)getParentFragment()).getDistance();
+            ((MainActivity)getActivity()).setDistance(distance);
             ((MainActivity)getActivity()).setAdvanceSearch(true);
             ((MainActivity)getActivity()).replaceFragment(MapFragment.newInstance("",""),MainActivity.TAG_MAP,false);
 

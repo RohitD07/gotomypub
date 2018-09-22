@@ -7,7 +7,28 @@
     android:orientation="vertical"
     tools:context=".fragments.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.gotomypub.customviews.FontTextView
+        android:id="@+id/txt_distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:lines="1"
+        android:text="@string/distance_label"
+        android:gravity="center_vertical"
+        />
+
+    <com.crystal.crystalrangeseekbar.widgets.CrystalSeekbar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:min_value="5"
+        app:max_value="100"
+        app:data_type="_integer"
+        app:steps="5"
+        />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

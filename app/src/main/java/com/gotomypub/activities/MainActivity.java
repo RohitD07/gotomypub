@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity
 
     public boolean showMapOnLocationFetch=false;
 
+
     private static final String[] INITIAL_PERMS = {
             Manifest.permission.ACCESS_FINE_LOCATION
     };
@@ -76,6 +77,16 @@ public class MainActivity extends AppCompatActivity
     public void setCurrentLocation(Location currentLocation) {
         this.currentLocation = currentLocation;
     }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
+    String distance="5";
 
     Location currentLocation;
     LatLng placeLatLng;

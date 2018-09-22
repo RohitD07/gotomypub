@@ -13,6 +13,16 @@ public class PubApiRequest extends ApiRequest {
     String lat;
     @SerializedName("lng")
     String lng;
+     @SerializedName("distance")
+     String distance;
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
 
     @SerializedName("LstBeer")
     ArrayList<String> lstBeer;

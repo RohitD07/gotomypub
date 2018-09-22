@@ -73,7 +73,6 @@ public class NormalSearchFragment extends Fragment implements View.OnClickListen
      * @param param2 Parameter 2.
      * @return A new instance of fragment NormalSearchFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static NormalSearchFragment newInstance(String param1, String param2) {
         NormalSearchFragment fragment = new NormalSearchFragment();
         Bundle args = new Bundle();
@@ -178,7 +177,8 @@ public class NormalSearchFragment extends Fragment implements View.OnClickListen
             selectedLocation.setLatitude(placeLatLng.latitude);
 
             ((MainActivity)getActivity()).setCurrentLocation(selectedLocation);
-
+            String distance=((SearchFragment)getParentFragment()).getDistance();
+            ((MainActivity)getActivity()).setDistance(distance);
             ((MainActivity)getActivity()).setAdvanceSearch(false);
             ((MainActivity)getActivity()).replaceFragment(MapFragment.newInstance("",""),MainActivity.TAG_MAP,false);
 

@@ -217,6 +217,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,Controll
         //ApiClient.callApi(getActivity(),,controler);
         pubApiRequest.setLat(String.valueOf(mLocation.getLatitude()));
         pubApiRequest.setLng(String.valueOf(mLocation.getLongitude()));
+        String distance= String.valueOf(((MainActivity)getActivity()).getDistance());
+        pubApiRequest.setDistance(distance);
         if(((MainActivity)getActivity()).isAdvanceSearch()){
             ArrayList<BeerItem> beerItemArrayList=((MyPubApplication)getActivity().getApplicationContext()).getBeerItemArrayList();
             ArrayList<PubFeatureItem> pubFeatureItemArrayList=((MyPubApplication)getActivity().getApplicationContext()).getPubFeatureItemArrayList();
